@@ -1,0 +1,34 @@
+<hr>
+  <div>  
+    <div class="row">  
+      <div class="col-sm-12 btn btn-primary ">  
+            {{title}}
+      </div>  
+    </div>  
+  </div>
+
+  <hr>
+  <br>
+
+<br/>
+ 
+<div class="row">
+    <div class="col-sm-5">   </div>
+    <div class="col-sm-4 btn-group text-center"> 
+        <button class="btn btn-primary" [class.active]="filterBy==='all'" (click)="filterBy='all'">All</button>&nbsp;
+        <button class="btn btn-primary" [class.active]="filterBy==='forest'" (click)="filterBy='forest'">Forest </button>&nbsp;
+        <button class="btn btn-primary" [class.active]="filterBy==='Animal'" (click)="filterBy='Animal'">Animal </button>
+    </div>
+    <div class="col-sm-3">   </div>
+  
+  </div>
+
+
+<div class="row"> 
+    <ul>
+        <li *ngFor ="let image of (visibleImages | imagefilter: filterBy)"> 
+            <img src="{{image.url}}" class="th" width="200" height="160">
+        </li> 
+     
+    </ul>
+</div>

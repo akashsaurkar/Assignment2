@@ -1,0 +1,33 @@
+<div>  
+        <div class="row">  
+          <div class="col-sm-12 btn btn-primary">  
+              Welcome to DashBoard  
+          </div>  
+        </div>  
+      </div>
+    
+    
+      
+    <!-- FirstName:"", LastName:"" , Username:"",Password:"",Email:"",ContactNo:"",Address: -->
+    <table class="table">
+      <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>ContactNo</th>
+          <th>Address</th>
+          <th>Action</th>
+      </tr>
+     
+      <tr *ngFor="let game of exportData; let i = index">
+          <td>{{i + 1}}</td>
+          <td>{{game.FirstName}} {{game.LastName}}</td>
+          <td>{{game.Username}}</td>
+          <td>{{game.ContactNo}}</td>
+          <td>{{game.Address}}</td>
+          <td (click)="deleteRow(i)"> 
+              <button>Delete <i class="fa fa-trash-o"></i></button>
+          </td>    
+      </tr>
+    </table>
+    

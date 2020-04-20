@@ -1,0 +1,15 @@
+<h5>Increment counter</h5>
+
+<app-child [childCounter]="counter"></app-child> 
+
+<div>  
+  <button (click)="onCounter()">Counter</button>
+  <button (click)="onReset()">Reset</button> <br/> 
+</div>
+
+<br><br>
+
+<h5>Console Input Text Example</h5>
+
+<input type='text' [(ngModel)]='userText'/><br/><br/>
+<app-hobby [hobby]='userText'></app-hobby>

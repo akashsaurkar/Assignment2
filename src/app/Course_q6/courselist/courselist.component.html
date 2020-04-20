@@ -1,0 +1,24 @@
+<hr>
+  <div>  
+    <div class="row">  
+      <div class="col-sm-12 btn btn-primary ">  
+        
+<h5>{{title}}</h5>
+
+           </div>  
+    </div>  
+  </div>
+
+  <hr>
+  <br>
+
+ 
+<div class="row">    
+    <ul>
+        <li *ngFor ="let course of courseList"> 
+            <a [routerLink] = "['/course', course.id]">
+                {{course.name}}
+            </a>
+        </li>
+    </ul>
+</div>
